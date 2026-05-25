@@ -50,8 +50,8 @@ if today in birthday_dict:
 
     with smtplib.SMTP(host="smtp.gmail.com", port=587) as server:
         server.starttls()
-        server.login(user=my_email, password=password)
-        server.sendmail(from_addr=my_email,
+        server.login(user=MY_EMAIL, password=MY_PASSWORD)
+        server.sendmail(from_addr=MY_EMAIL,
                         to_addrs=birthday_person["email"],
                         msg=f"Subject: Happy Birthday!\n\n{contents}")
 
